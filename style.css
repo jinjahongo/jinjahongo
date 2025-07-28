@@ -31,6 +31,12 @@ body {
   font-size: 32px;
   font-weight: 600;
   letter-spacing: -1px;
+  .logo:hover,
+.logo:focus,
+.logo:active {
+  text-decoration: none;
+  color: #111;
+  cursor: default; /* 마우스 손가락 커서도 없애고 싶다면 */
 }
 
 /* GNB 메뉴 */
