@@ -5,16 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>jangjihoon</title>
 
-  <!-- ✅ Pretendard 웹폰트 불러오기 -->
+  <!-- ✅ Pretendard 폰트 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 
+  <!-- ✅ 기본 스타일 -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- ✅ 로딩 전용 스타일 분리 -->
+  <link rel="stylesheet" href="loading.css" />
 </head>
 <body>
-  <!-- 로딩 화면 -->
+  <!-- ✅ 로딩 마크업 -->
   <div id="loader">
     <h1>
-      <span>J</span><span>A</span><span>N</span><span>G</span><span>J</span><span>I</span><span>H</span><span>O</span><span>O</span><span>N</span>
+      <span>J</span><span>A</span><span>N</span><span>G</span><span>J</span>
+      <span>I</span><span>H</span><span>O</span><span>O</span><span>N</span>
     </h1>
   </div>
 
@@ -28,14 +33,7 @@
     </nav>
   </header>
 
-  <!-- JS: 로딩 제거 -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 최소 2.5초 후에 로딩 화면 숨기기
-      setTimeout(() => {
-        document.getElementById('loader').classList.add('hide');
-      }, 2500);
-    });
-  </script>
+  <!-- ✅ 로딩 스크립트 분리 -->
+  <script src="loading.js"></script>
 </body>
 </html>
