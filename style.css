@@ -22,7 +22,7 @@ body {
 #loader h1 {
   font-size: 15vw; /* 더 큼직하게 */
   font-weight: bold;
-  letter-spacing: -32px; /* 더 붙게 */
+  letter-spacing: -40px; /* 더 붙게 */
   display: flex;
   line-height: 1;
   margin: 0;
