@@ -8,14 +8,14 @@ body {
 }
 
 
-/* GNB 전체 구조 */
+/* GNB 전체 */
 .gnb {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
   height: 80px;
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid #e0e0e0;
-  padding: 0;
+  padding: 0 20px;
 }
 
 /* 왼쪽 로고 */
@@ -24,20 +24,22 @@ body {
   font-weight: 600;
 }
 
-/* 오른쪽 GNB 메뉴 wrapper */
-.gnb-right {
-  margin-left: auto; /* 화면 중앙 기준 오른쪽에 붙음 */
+/* 오른쪽 메뉴: 화면 중앙 기준 정렬 */
+.menu {
+  position: absolute;
+  left: 50%;
   display: flex;
   gap: 40px;
+  transform: translateX(0); /* 이후 미세 조정 가능 */
 }
 
-.gnb-right a {
+.menu a {
   text-decoration: none;
   color: #111;
   font-size: 32px;
   font-weight: 600;
 }
 
-.gnb-right a:hover {
+.menu a:hover {
   opacity: 0.6;
 }
