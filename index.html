@@ -26,10 +26,11 @@
 
   <!-- JS: 로딩 제거 -->
   <script>
-    window.addEventListener('load', () => {
+    document.addEventListener('DOMContentLoaded', () => {
+      // 최소 2.5초 후에 로딩 화면 숨기기
       setTimeout(() => {
         document.getElementById('loader').classList.add('hide');
-      }, 1500); // 로딩 애니메이션 충분히 보여준 후 숨김
+      }, 2500);
     });
   </script>
 </body>
