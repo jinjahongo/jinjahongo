@@ -9,10 +9,12 @@
 }
 
 .about-container {
-  width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(0); /* 앞으로 여기에만 조정 적용 */
   max-width: 880px;
-  padding-left: 50%;
-  transform: translateX(0);
+  width: fit-content;
+  text-align: left;
   box-sizing: border-box;
 }
 
