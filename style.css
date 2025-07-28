@@ -13,27 +13,28 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 80px;
   border-bottom: 1px solid #e0e0e0;
   padding: 0;
 }
 
 /* 로고 텍스트 */
 .logo {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 32px;
+  font-weight: 600; /* Pretendard semi-bold */
 }
 
 /* 메뉴 우측 정렬 */
 .menu {
   display: flex;
-  gap: 32px;
+  gap: 40px;
 }
 
 .menu a {
   text-decoration: none;
   color: #111;
-  font-size: 0.95rem;
+  font-size: 32px;
+  font-weight: 600; /* semi-bold */
 }
 
 .menu a:hover {
