@@ -40,15 +40,15 @@ body {
 
 /* 순차 delay */
 #loader h1 span:nth-child(1) { animation-delay: 0s; }
-#loader h1 span:nth-child(2) { animation-delay: 0.06s; }
-#loader h1 span:nth-child(3) { animation-delay: 0.12s; }
-#loader h1 span:nth-child(4) { animation-delay: 0.18s; }
-#loader h1 span:nth-child(5) { animation-delay: 0.24s; }
-#loader h1 span:nth-child(6) { animation-delay: 0.30s; }
-#loader h1 span:nth-child(7) { animation-delay: 0.36s; }
-#loader h1 span:nth-child(8) { animation-delay: 0.42s; }
-#loader h1 span:nth-child(9) { animation-delay: 0.48s; }
-#loader h1 span:nth-child(10){ animation-delay: 0.54s; }
+#loader h1 span:nth-child(2) { animation-delay: 0.04s; }
+#loader h1 span:nth-child(3) { animation-delay: 0.08s; }
+#loader h1 span:nth-child(4) { animation-delay: 0.12s; }
+#loader h1 span:nth-child(5) { animation-delay: 0.16s; }
+#loader h1 span:nth-child(6) { animation-delay: 0.22s; }
+#loader h1 span:nth-child(7) { animation-delay: 0.28s; }
+#loader h1 span:nth-child(8) { animation-delay: 0.36s; }
+#loader h1 span:nth-child(9) { animation-delay: 0.44s; }
+#loader h1 span:nth-child(10){ animation-delay: 0.52s; }
 
 /* 텍스트 아래서 위로 슬라이드 (페이드 없이) */
 @keyframes slideUpClip {
