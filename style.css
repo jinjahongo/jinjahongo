@@ -7,63 +7,7 @@ body {
   padding: 0 20px;
 }
 
-/* 로딩 화면 전체 */
-#loader {
-  position: fixed;
-  inset: 0;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  overflow: hidden; /* 전체 화면 넘김 방지 */
-}
 
-/* 마스킹용 감싸는 wrapper */
-#loader h1 {
-  font-size: 17.2vw;
-  font-weight: medium;
-  letter-spacing: -36px;
-  line-height: 1;
-  margin: 0;
-  display: flex;
-  overflow: hidden; /* 텍스트 아래 잘리게 하기 위한 핵심 */
-  padding-right: 1vw; /* or 1vw */
-}
-
-/* 각 글자에 애니메이션 적용 */
-#loader h1 span {
-  display: inline-block;
-  transform: translateY(100%);
-  animation: slideUpClip 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-/* 순차 delay */
-#loader h1 span:nth-child(1) { animation-delay: 0s; }
-#loader h1 span:nth-child(2) { animation-delay: 0.04s; }
-#loader h1 span:nth-child(3) { animation-delay: 0.08s; }
-#loader h1 span:nth-child(4) { animation-delay: 0.12s; }
-#loader h1 span:nth-child(5) { animation-delay: 0.16s; }
-#loader h1 span:nth-child(6) { animation-delay: 0.22s; }
-#loader h1 span:nth-child(7) { animation-delay: 0.28s; }
-#loader h1 span:nth-child(8) { animation-delay: 0.36s; }
-#loader h1 span:nth-child(9) { animation-delay: 0.44s; }
-#loader h1 span:nth-child(10){ animation-delay: 0.52s; }
-
-/* 텍스트 아래서 위로 슬라이드 (페이드 없이) */
-@keyframes slideUpClip {
-  to {
-    transform: translateY(0);
-  }
-}
-
-/* 사라지는 효과 (로딩 종료) */
-#loader.hide {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.6s ease, visibility 0s linear 0.6s;
-}
 /* GNB 한 줄 정렬 */
 .gnb {
   display: flex;
