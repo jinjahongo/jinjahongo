@@ -28,7 +28,7 @@ body {
   margin: 0;
   display: flex;
   overflow: hidden; /* 텍스트 아래 잘리게 하기 위한 핵심 */
-  padding-right: 0.5vw; /* or 1vw */
+  padding-right: 1vw; /* or 1vw */
 }
 
 /* 각 글자에 애니메이션 적용 */
