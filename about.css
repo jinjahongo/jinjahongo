@@ -12,19 +12,20 @@
   width: 100%;
   max-width: 1200px;
   padding-left: 50%;
-  transform: translateX(-240px); /* 가운데 기준으로 좌측으로 밀기 */
+  transform: translateX(0); /* 가운데 기준으로 좌측으로 밀기 */
 }
 
 .about-container h2 {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 600;
   letter-spacing: -2px;
   margin-bottom: 24px;
 }
 
 .about-container p {
-  font-size: 20px;
+  font-size: 32px;
   line-height: 1.8;
-  color: #333;
-  max-width: 520px;
+  color: #111;
+  letter-spacing: -1px;
+  max-width: 880px;
 }
