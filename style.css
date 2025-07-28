@@ -38,8 +38,8 @@ body {
   position: absolute;
   left: 50%;
   display: flex;
-  gap: 40px;
-  transform: translateX(-160px); /* 메뉴 전체 너비 절반만큼 왼쪽으로 이동 */
+  gap: 240px;
+  transform: translateX; /* 메뉴 전체 너비 절반만큼 왼쪽으로 이동 */
 }
 
 .menu a {
