@@ -1,31 +1,38 @@
-/* 전체 초기화 */
+/* 전체 기본 설정 */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
   background-color: #fff;
   color: #111;
+  padding: 0 20px; /* 전체 좌우 마진 20px */
 }
 
-/* GNB 영역 */
+/* GNB 한 줄 정렬 */
 .gnb {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* 좌우 끝 정렬 */
   align-items: center;
-  padding: 20px 40px;
+  height: 60px;
   border-bottom: 1px solid #e0e0e0;
 }
 
+/* 왼쪽 로고 */
 .logo {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.5px;
 }
 
+/* 오른쪽 메뉴 */
 .menu a {
-  margin-left: 24px;
+  margin-left: 32px;
   text-decoration: none;
   color: #111;
-  font-size: 1rem;
+  font-size: 0.95rem;
+}
+
+.menu a:first-child {
+  margin-left: 0;
 }
 
 .menu a:hover {
