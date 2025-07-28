@@ -14,7 +14,6 @@ body {
   height: 80px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e0e0e0;
   padding: 0 20px;
 }
 
@@ -22,7 +21,7 @@ body {
 .logo {
   font-size: 32px;
   font-weight: 600;
-  letter-spacing: -8px; /* 자간 추가 */
+  letter-spacing: -16px; /* 자간 추가 */
 }
 
 /* 오른쪽 메뉴: 화면 중앙 기준 정렬 */
@@ -39,7 +38,7 @@ body {
   color: #111;
   font-size: 32px;
   font-weight: 600;
-  letter-spacing: -8px; /* 자간 추가 */
+  letter-spacing: -16px; /* 자간 추가 */
 }
 
 .menu a:hover {
