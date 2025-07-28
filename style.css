@@ -1,55 +1,20 @@
-/* 전체 기본 설정 */
+/* 전체 설정 */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
   background-color: #fff;
   color: #111;
-  padding: 0 20px; /* 전체 좌우 마진 20px */
+  padding: 0 20px;
 }
 
-/* GNB 한 줄 정렬 */
-.gnb {
-  display: flex;
-  justify-content: space-between; /* 좌우 끝 정렬 */
-  align-items: center;
-  height: 60px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-/* 왼쪽 로고 */
-.logo {
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-}
-
-/* 오른쪽 메뉴 */
-.menu a {
-  margin-left: 32px;
-  text-decoration: none;
-  color: #111;
-  font-size: 0.95rem;
-}
-
-.menu a:first-child {
-  margin-left: 0;
-}
-
-.menu a:hover {
-  opacity: 0.6;
-}
-
-/* 로딩 화면 초기 설정 */
+/* 로딩 화면 */
 #loader {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: #fff;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 1000;
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
@@ -57,13 +22,12 @@ body {
 #loader h1 {
   font-size: 3rem;
   font-weight: bold;
-  letter-spacing: -4px; /* 자간 좁힘 */
+  letter-spacing: -4px; /* 자간 붙게 */
   opacity: 0;
   transform: translateY(40px);
   animation: slideUp 1s ease forwards;
 }
 
-/* 올라오는 애니메이션 */
 @keyframes slideUp {
   to {
     opacity: 1;
@@ -71,9 +35,41 @@ body {
   }
 }
 
-/* 로딩 숨기기 */
 #loader.hide {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+/* GNB 한 줄 정렬 */
+.gnb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0 0;
+}
+
+/* 로고 */
+.logo {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0;
+}
+
+/* 메뉴 */
+.menu {
+  display: flex;
+  gap: 32px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #111;
+  font-size: 0.95rem;
+}
+
+.menu a:hover {
+  opacity: 0.6;
 }
