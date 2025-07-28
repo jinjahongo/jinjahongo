@@ -20,8 +20,8 @@ body {
 }
 
 #loader h1 {
-  font-size: 20vw; /* 더 큼직하게 */
-  font-weight: bold;
+  font-size: 25vw; /* 더 큼직하게 */
+  font-weight: semibold;
   letter-spacing: -20px; /* 더 붙게 */
   display: flex;
   line-height: 1;
