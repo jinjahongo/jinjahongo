@@ -1,3 +1,9 @@
+/* 기본 링크 초기화 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* 전체 설정 */
 body {
   margin: 0;
@@ -7,20 +13,17 @@ body {
   padding: 0 20px;
 }
 
-
 /* GNB */
 .gnb {
   position: relative;
   height: 80px;
   display: flex;
   align-items: center;
-  /* padding: 0 20px; */
   opacity: 0;
   transform: translateY(60px);
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
-/* GNB 등장 애니메이션 */
 .gnb.show {
   opacity: 1;
   transform: translateY(0);
@@ -31,34 +34,38 @@ body {
   font-size: 32px;
   font-weight: 600;
   letter-spacing: -1px;
-  .logo:hover,
+  text-decoration: none;
+  color: #111;
+  cursor: default;
+}
+
+.logo:hover,
 .logo:focus,
 .logo:active {
   text-decoration: none;
   color: #111;
-  cursor: default; /* 마우스 손가락 커서도 없애고 싶다면 */
+  cursor: default;
 }
 
-/* GNB 메뉴 */
+/* 메뉴 */
 .menu {
   position: absolute;
   left: 50%;
+  transform: translateX(0);
   display: flex;
   gap: 240px;
-  transform: translateX(0); /* 메뉴 전체 너비 절반만큼 왼쪽으로 이동 */
 }
 
 .menu a {
   position: relative;
-  text-decoration: none;
-  color: #111;
   font-size: 32px;
   font-weight: 600;
   letter-spacing: -1px;
+  color: #111;
   transition: color 0.3s ease;
 }
 
-/* 밑줄 효과 (중앙에서 펼쳐짐) */
+/* 밑줄 효과 */
 .menu a::after {
   content: '';
   position: absolute;
@@ -71,25 +78,12 @@ body {
   transition: width 0.3s ease;
 }
 
-/* hover 시 펼침 */
-.menu a:hover::after {
-  width: 100%;
-}
-
-/* 클릭(active) 시 밑줄 유지 */
+.menu a:hover::after,
 .menu a.active::after {
   width: 100%;
 }
 
-/* GNB 애니메이션 초기 상태 (숨김 + 아래 위치) */
-.gnb {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
-
-/* 로딩 완료 후 GNB 등장 트리거 */
-.gnb.show {
-  opacity: 1;
-  transform: translateY(0);
+.menu a:hover,
+.menu a.active {
+  color: #111;
 }
