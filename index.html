@@ -8,13 +8,13 @@
 </head>
 <body>
   <!-- 로딩 화면 -->
-<div id="loader">
-  <h1>
-    <span>J</span><span>I</span><span>N</span><span>J</span><span>A</span><span>H</span><span>O</span><span>N</span><span>G</span><span>O</span>
-  </h1>
-</div>
+  <div id="loader">
+    <h1>
+      <span>J</span><span>I</span><span>N</span><span>J</span><span>A</span><span>H</span><span>O</span><span>N</span><span>G</span><span>O</span>
+    </h1>
+  </div>
 
-  <!-- 실제 GNB -->
+  <!-- GNB -->
   <header class="gnb">
     <div class="logo">jinjahongo</div>
     <nav class="menu">
@@ -24,12 +24,12 @@
     </nav>
   </header>
 
-  <!-- JS로 로딩 숨기기 -->
+  <!-- JS: 로딩 제거 -->
   <script>
     window.addEventListener('load', () => {
       setTimeout(() => {
         document.getElementById('loader').classList.add('hide');
-      }, 1200); // 로딩 애니메이션 감상 시간
+      }, 1500); // 로딩 애니메이션 충분히 보여준 후 숨김
     });
   </script>
 </body>
