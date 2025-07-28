@@ -1,52 +1,33 @@
-/* 기본 스타일 초기화 */
+/* 전체 초기화 */
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  font-family: 'Helvetica Neue', sans-serif;
   background-color: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  margin-top: 50px;
+  color: #111;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 40px;
+/* GNB 영역 */
+.gnb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }
 
-header p {
-  color: #666;
-}
-
-section {
-  margin-bottom: 30px;
-}
-
-h2 {
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-  color: #444;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-a {
-  color: #007acc;
+.menu a {
+  margin-left: 24px;
   text-decoration: none;
+  color: #111;
+  font-size: 1rem;
+}
+
+.menu a:hover {
+  opacity: 0.6;
 }
