@@ -1,22 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // 로딩 끝나면 GNB 등장
+  // 로딩 끝나면 GNB 보이게 하기
   setTimeout(() => {
     document.getElementById('loader').classList.add('hide');
     document.querySelector('.gnb').classList.add('show');
   }, 2500);
 
-  // ✅ GNB 메뉴 클릭 시 active 클래스 토글
+  // ✅ GNB 메뉴 클릭하면 밑줄 유지되도록 하기
   const menuLinks = document.querySelectorAll('.menu a');
 
   menuLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      // prevent default scroll only if needed
-      // e.preventDefault(); ← 이건 필요 시 사용
-
-      // 모든 메뉴에서 active 제거
+    link.addEventListener('click', () => {
+      // 기존에 붙은 active 클래스들 제거
       menuLinks.forEach(el => el.classList.remove('active'));
-
-      // 클릭한 항목에 active 추가
+      // 클릭한 메뉴에 active 클래스 추가
       link.classList.add('active');
     });
   });
