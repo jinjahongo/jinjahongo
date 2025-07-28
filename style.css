@@ -22,8 +22,8 @@ body {
 /* 마스킹용 감싸는 wrapper */
 #loader h1 {
   font-size: 17.5vw;
-  font-weight: semibold;
-  letter-spacing: -48px;
+  font-weight: medium;
+  letter-spacing: -40px;
   line-height: 1;
   margin: 0;
   display: flex;
