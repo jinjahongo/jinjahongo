@@ -60,7 +60,7 @@ body {
   bottom: 0px;
   transform: translateX(-50%);
   width: 0;
-  height: 2px;
+  height: 4px;
   background-color: #111;
   transition: width 0.3s ease;
 }
