@@ -14,15 +14,12 @@
   <link rel="stylesheet" href="about.css" />
 </head>
 <body>
-  <!-- GNB 그대로 복붙 (링크만 수정) -->
-  <header class="gnb show">
-    <div class="logo">JANGJIHOON</div>
-    <nav class="menu">
-      <a href="about.html" class="active">About</a>
-      <a href="work.html">Work</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+ <!-- ✅ GNB 자리에 이 div만 둬요 -->
+  <div id="gnb-container"></div>
+
+  <!-- ✅ GNB 스타일과 애니메이션은 기존 style.css 그대로 유지 -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="gnb.js"></script>
 
   <!-- 본문: About 내용 -->
   <section class="about-section">
