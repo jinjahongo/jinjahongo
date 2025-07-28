@@ -23,11 +23,12 @@ body {
 #loader h1 {
   font-size: 17.5vw;
   font-weight: medium;
-  letter-spacing: -40px;
+  letter-spacing: -36px;
   line-height: 1;
   margin: 0;
   display: flex;
   overflow: hidden; /* 텍스트 아래 잘리게 하기 위한 핵심 */
+  padding-right: 0.5vw; /* or 1vw */
 }
 
 /* 각 글자에 애니메이션 적용 */
