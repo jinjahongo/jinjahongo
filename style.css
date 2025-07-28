@@ -7,7 +7,7 @@ body {
   padding: 0 20px;
 }
 
-/* 로딩 화면 */
+/* 로딩 화면 전체 */
 #loader {
   position: fixed;
   inset: 0;
@@ -20,30 +20,32 @@ body {
 }
 
 #loader h1 {
-  font-size: 10vw; /* 큰 텍스트 */
+  font-size: 15vw; /* 더 큼직하게 */
   font-weight: bold;
-  letter-spacing: -4px; /* 자간 좁게 */
+  letter-spacing: -6px; /* 더 붙게 */
   display: flex;
+  line-height: 1;
+  margin: 0;
 }
 
 /* 각 글자 애니메이션 */
 #loader h1 span {
   display: inline-block;
   opacity: 0;
-  transform: translateY(40px);
-  animation: slideUpLetter 0.5s ease forwards;
+  transform: translateY(60px);
+  animation: slideUpLetter 1s ease forwards;
 }
 
 #loader h1 span:nth-child(1) { animation-delay: 0s; }
-#loader h1 span:nth-child(2) { animation-delay: 0.05s; }
-#loader h1 span:nth-child(3) { animation-delay: 0.1s; }
-#loader h1 span:nth-child(4) { animation-delay: 0.15s; }
-#loader h1 span:nth-child(5) { animation-delay: 0.2s; }
-#loader h1 span:nth-child(6) { animation-delay: 0.25s; }
-#loader h1 span:nth-child(7) { animation-delay: 0.3s; }
-#loader h1 span:nth-child(8) { animation-delay: 0.35s; }
-#loader h1 span:nth-child(9) { animation-delay: 0.4s; }
-#loader h1 span:nth-child(10) { animation-delay: 0.45s; }
+#loader h1 span:nth-child(2) { animation-delay: 0.07s; }
+#loader h1 span:nth-child(3) { animation-delay: 0.14s; }
+#loader h1 span:nth-child(4) { animation-delay: 0.21s; }
+#loader h1 span:nth-child(5) { animation-delay: 0.28s; }
+#loader h1 span:nth-child(6) { animation-delay: 0.35s; }
+#loader h1 span:nth-child(7) { animation-delay: 0.42s; }
+#loader h1 span:nth-child(8) { animation-delay: 0.49s; }
+#loader h1 span:nth-child(9) { animation-delay: 0.56s; }
+#loader h1 span:nth-child(10) { animation-delay: 0.63s; }
 
 @keyframes slideUpLetter {
   to {
@@ -52,10 +54,12 @@ body {
   }
 }
 
+/* 로딩 사라짐 */
 #loader.hide {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opacity 0.8s ease, visibility 0s linear 0.8s;
 }
 
 /* GNB 한 줄 정렬 */
