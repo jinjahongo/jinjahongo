@@ -1,10 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jinjahongo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
   <!-- 로딩 화면 -->
   <div id="loader">
     <h1>JINJAHONGO</h1>
   </div>
 
-  <!-- 실제 GNB 내용 -->
+  <!-- 실제 GNB -->
   <header class="gnb">
     <div class="logo">jinjahongo</div>
     <nav class="menu">
@@ -14,11 +22,13 @@
     </nav>
   </header>
 
-  <!-- JS: 로딩 후 숨기기 -->
+  <!-- JS로 로딩 숨기기 -->
   <script>
     window.addEventListener('load', () => {
-      const loader = document.getElementById('loader');
-      loader.classList.add('hide');
+      setTimeout(() => {
+        document.getElementById('loader').classList.add('hide');
+      }, 1200); // 로딩 애니메이션 감상 시간
     });
   </script>
 </body>
+</html>
