@@ -1,0 +1,30 @@
+/* About Section */
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 160px; /* GNB와 간격 확보 */
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 50%;
+  transform: translateX(-240px); /* 가운데 기준으로 좌측으로 밀기 */
+}
+
+.about-container h2 {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.about-container p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #333;
+  max-width: 520px;
+}
