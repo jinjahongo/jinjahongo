@@ -10,7 +10,7 @@ body {
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', sans-serif;
   background-color: #fff;
   color: #111;
-  padding: 0 0px;
+  /* adding: 0 0px; */
 }
 
 /* GNB */
@@ -92,7 +92,7 @@ body {
 
 .grid-section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 2fr);
   gap: 20px;
   width: 100%;
   padding: 0 20px;
