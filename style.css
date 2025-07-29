@@ -131,3 +131,16 @@ body {
   color: #111;
   letter-spacing: -0.5px;
 }
+
+/* ===== 공통: 아래에서 위로 등장하는 애니메이션 ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
