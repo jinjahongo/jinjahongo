@@ -93,25 +93,30 @@ body {
 .grid-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  max-width: 1200px;
-  margin: 160px auto 80px;
+  gap: 20px;
+  width: 100%;
   padding: 0 20px;
+  margin: 160px 0 80px;
   box-sizing: border-box;
 }
 
 .grid-item {
+  width: 100%;
   text-align: center;
 }
 
 .thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* 썸네일 비율 고정 */
   overflow: hidden;
   border-radius: 12px;
 }
 
 .thumbnail img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
 }
@@ -126,4 +131,3 @@ body {
   color: #111;
   letter-spacing: -0.5px;
 }
-
