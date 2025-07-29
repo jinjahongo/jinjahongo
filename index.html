@@ -23,16 +23,43 @@
     </h1>
   </div>
 
- <!-- ✅ GNB 자리에 이 div만 둬요 -->
+  <!-- ✅ GNB 자리 -->
   <div id="gnb-container"></div>
 
-  <!-- ✅ GNB 스타일과 애니메이션은 기존 style.css 그대로 유지 -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- ✅ 썸네일 그리드 섹션 -->
+  <main>
+    <section class="grid-section">
+      <div class="grid-item">
+        <div class="thumbnail">
+          <img src="images/thumb1.jpg" alt="Thumbnail 1">
+        </div>
+        <p class="grid-caption">Project Title 1</p>
+      </div>
+      <div class="grid-item">
+        <div class="thumbnail">
+          <img src="images/thumb2.jpg" alt="Thumbnail 2">
+        </div>
+        <p class="grid-caption">Project Title 2</p>
+      </div>
+      <div class="grid-item">
+        <div class="thumbnail">
+          <img src="images/thumb3.jpg" alt="Thumbnail 3">
+        </div>
+        <p class="grid-caption">Project Title 3</p>
+      </div>
+      <div class="grid-item">
+        <div class="thumbnail">
+          <img src="images/thumb4.jpg" alt="Thumbnail 4">
+        </div>
+        <p class="grid-caption">Project Title 4</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ✅ GNB 스크립트 -->
   <script src="gnb.js"></script>
 
-  <!-- 🔽 이후에 about/work/contact 섹션 추가 가능 -->
-
-  <!-- ✅ 로딩 제어 스크립트 분리 -->
+  <!-- ✅ 로딩 제어 스크립트 -->
   <script src="loading.js"></script>
 </body>
 </html>
