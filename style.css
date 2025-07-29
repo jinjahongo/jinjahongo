@@ -1,45 +1,46 @@
 /* 기본 링크 초기화 */
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none; /* 밑줄 제거 */
+  color: inherit;         /* 부모 요소의 글자색을 따름 */
 }
 
 /* 전체 설정 */
 body {
-  margin: 0;
+  margin: 0; /* 브라우저 기본 여백 제거 */
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', sans-serif;
-  background-color: #fff;
-  color: #111;
-  /* adding: 0 0px; */
+  background-color: #fff; /* 배경색 */
+  color: #111;            /* 전체 기본 글자색 */
 }
 
-/* GNB */
+/* GNB 전체 */
 .gnb {
   position: relative;
-  height: 80px;
+  height: 80px; /* GNB의 높이 – 필요 시 이 값을 바꿔 전체 GNB 높이 조정 가능 */
   display: flex;
-  align-items: center;
-  opacity: 0;
-  transform: translateY(60px);
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  align-items: center; /* 수직 중앙 정렬 */
+  opacity: 0;          /* 초기 숨김 */
+  transform: translateY(60px); /* 아래에서 위로 등장 애니메이션 시작 위치 */
+  transition: transform 0.6s ease, opacity 0.6s ease; /* 등장의 부드러움 조절 */
 }
 
+/* GNB 등장 시 */
 .gnb.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0); /* 위로 올라오도록 전환됨 */
 }
 
-/* 로고 */
+/* 로고 스타일 */
 .logo {
-  font-size: 32px;
-  font-weight: 600;
-  letter-spacing: -1px;
+  font-size: 32px;     /* 로고 텍스트 크기 */
+  font-weight: 600;    /* 굵기 */
+  letter-spacing: -1px;/* 자간 줄이기 */
   text-decoration: none;
   color: #111;
   cursor: default;
-  padding-left: 20px;  /* ✅ 좌측 여백만 */
+  padding-left: 20px;  /* ✅ 로고의 왼쪽 여백 – GNB 좌측 여백 맞춤 */
 }
 
+/* 로고 비활성화된 상태에서도 스타일 유지 */
 .logo:hover,
 .logo:focus,
 .logo:active {
@@ -48,40 +49,42 @@ body {
   cursor: default;
 }
 
-/* 메뉴 */
+/* GNB 메뉴 영역 */
 .menu {
   position: absolute;
-  left: 50%;
+  left: 50%;               /* 화면 중앙 기준 */
   transform: translateX(0);
   display: flex;
-  gap: 240px;
+  gap: 240px;              /* 메뉴 간격 – 숫자를 줄이면 메뉴 간격이 좁아짐 */
 }
 
+/* GNB 메뉴 항목 */
 .menu a {
   position: relative;
-  font-size: 32px;
+  font-size: 32px;         /* 메뉴 글자 크기 */
   font-weight: 600;
-  letter-spacing: -1px;
+  letter-spacing: -1px;    /* 글자 간격 */
   color: #111;
   transition: color 0.3s ease;
 }
 
-/* 밑줄 효과 */
+/* 메뉴 밑줄 효과 */
 .menu a::after {
   content: '';
   position: absolute;
   left: 50%;
-  bottom: 0px;
+  bottom: 0px;             /* 밑줄 위치 – 메뉴 글자 기준 아래 위치 */
   transform: translateX(-50%);
-  width: 0;
-  height: 4px;
+  width: 0;                /* 기본 상태에서 밑줄 안 보이게 */
+  height: 4px;             /* 밑줄 두께 */
   background-color: #111;
   transition: width 0.3s ease;
 }
 
+/* hover 또는 active 시 밑줄 보이기 */
 .menu a:hover::after,
 .menu a.active::after {
-  width: 100%;
+  width: 100%;             /* 밑줄 전체 길이 */
 }
 
 .menu a:hover,
@@ -89,55 +92,66 @@ body {
   color: #111;
 }
 
-/* ===== 썸네일 그리드 (Main Section) ===== */
+
+/* ==============================
+   🔽 썸네일 그리드 (Main Section)
+   ============================== */
 
 .grid-section {
   display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  gap: 12px;
+  grid-template-columns: repeat(2, 2fr); /* 2열 구성 – 3열로 변경하려면 repeat(3, 1fr) */
+  gap: 20px;               /* 썸네일 사이 간격 – 여기를 줄이면 이미지 간격 좁아짐 */
   width: 100%;
-  padding: 0 20px;
-  margin: 160px 0 80px;
+  padding: 0 20px;         /* 좌우 여백 – GNB의 로고 여백과 동일하게 맞춤 */
+  margin: 200px 0 160px;    /* 상단/하단 여백 – 첫 진입 위치 조절에 영향 있음 */
   box-sizing: border-box;
 }
 
 .grid-item {
-  width: 100%;
+  width: 100%;             /* 그리드 셀 전체를 채움 */
 }
 
+/* 썸네일 박스 */
 .thumbnail {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 9;    /* 썸네일 비율 – 4:3은 4/3, 정사각형은 1/1 */
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 4px;      /* 썸네일 모서리 둥글기 – 값 키우면 더 둥글게 */
 }
 
+/* 썸네일 이미지 */
 .thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
+  object-fit: cover;       /* 이미지가 썸네일 박스에 꽉 차게 유지 */
+  transition: transform 0.4s ease; /* hover 애니메이션 속도 */
 }
 
+/* hover 시 줌인 */
 .thumbnail:hover img {
-  transform: scale(1.05);
+  transform: scale(1.05);  /* 줌인 정도 – 1.05 = 5% 확대 */
 }
 
+/* 썸네일 아래 캡션 */
 .grid-caption {
-  font-size: 32px;
-  margin-top: 12px;
+  font-size: 32px;         /* 제목 텍스트 크기 */
+  margin-top: 12px;        /* 썸네일과의 간격 */
+  font-weight: 600;
   color: #111;
   letter-spacing: -1px;
 }
 
-/* ===== 공통: 아래에서 위로 등장하는 애니메이션 ===== */
+
+/* ==============================
+   🔽 아래에서 위로 등장 애니메이션
+   ============================== */
+
 .fade-up {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(40px); /* 초기 아래로 위치 – 값 클수록 더 멀리서 올라옴 */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* 애니메이션 속도 조절 */
 }
 
 .fade-up.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0); /* 등장 시 제자리로 */
 }
-
