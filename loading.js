@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuLinks = document.querySelectorAll('.menu a');
 
   // ✅ 로딩 텍스트 애니메이션이 끝난 후 GNB 및 콘텐츠 등장
-  const TEXT_ANIMATION_DURATION = 2500;
+  const TEXT_ANIMATION_DURATION = 2000;
 
   setTimeout(() => {
     // 1. 로딩 화면 숨김
