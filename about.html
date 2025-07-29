@@ -30,5 +30,17 @@
       </p>
     </div>
   </section>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const fadeEls = document.querySelectorAll('.fade-up');
+    fadeEls.forEach(el => {
+      setTimeout(() => {
+        el.classList.add('show');
+      }, 500); // 0.5초 후 부드럽게 등장
+    });
+  });
+</script>
 </body>
 </html>
+
