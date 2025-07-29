@@ -87,3 +87,43 @@ body {
 .menu a.active {
   color: #111;
 }
+
+/* ===== 썸네일 그리드 (Main Section) ===== */
+
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 160px auto 80px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.grid-item {
+  text-align: center;
+}
+
+.thumbnail {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.thumbnail:hover img {
+  transform: scale(1.05);
+}
+
+.grid-caption {
+  font-size: 20px;
+  margin-top: 12px;
+  color: #111;
+  letter-spacing: -0.5px;
+}
+
